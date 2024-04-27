@@ -2,7 +2,7 @@
 
 #### better than all the rest 🎶
 
-This is very simple wrapper around `Effect.gen` that makes sure that generator functions can be written in a cleaner way.
+Simple wrapper around Effect.gen that allows writing generator functions in a cleaner way.
 
 With plain `effect`:
 

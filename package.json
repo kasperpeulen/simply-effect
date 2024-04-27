@@ -2,7 +2,7 @@
   "name": "simply-effect",
   "version": "0.0.2",
   "type": "module",
-  "description": "simply-effect: better than all the rest",
+  "description": "Simple wrapper around Effect.gen that allows writing generator functions in a cleaner way.",
   "author": "Kasper Peulen",
   "license": "MIT",
   "repository": {
