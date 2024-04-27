@@ -4,7 +4,7 @@
 
 This is very simple wrapper around `Effect.gen` that makes sure that generator functions can be written in a cleaner way.
 
-With plain `Effect`:
+With plain `effect`:
 
 ```tsx
 import { Effect } from "effect";
@@ -35,7 +35,7 @@ export const getTodoById = effect(function* (id: string) {
 });
 ```
 
-If the generator function has no argument than `effect` will work exactly the same as `Effect.gen`.
+If the generator function has no arguments, then `effect` will work exactly the same as `Effect.gen`.
 
 ```tsx
 const value: Effect.Effect<number> = effect(function* () {
