@@ -1,3 +1,15 @@
+# v0.0.6 (Sat Apr 27 2024)
+
+#### 🐛 Bug Fix
+
+- Fix dts file location [#6](https://github.com/kasperpeulen/simply-effect/pull/6) ([@kasperpeulen](https://github.com/kasperpeulen))
+
+#### Authors: 1
+
+- Kasper Peulen ([@kasperpeulen](https://github.com/kasperpeulen))
+
+---
+
 # v0.0.4 (Sat Apr 27 2024)
 
 #### 🐛 Bug Fix
