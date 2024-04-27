@@ -7,15 +7,17 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kasperpeulen/simply-effect.git"
+    "url": "git+https://github.com/kasperpeulen/simply-effect.git"
   },
   "homepage": "https://github.com/kasperpeulen/simply-effect",
   "bugs": {
     "url": "https://github.com/kasperpeulen/simply-effect/issues"
   },
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/dts/index.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     }
