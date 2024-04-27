@@ -5,7 +5,10 @@
   "description": "simply-effect: better than all the rest",
   "author": "Kasper Peulen",
   "license": "MIT",
-  "repository": "kasperpeulen/simply-effect",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kasperpeulen/simply-effect.git"
+  },
   "homepage": "https://github.com/kasperpeulen/simply-effect",
   "bugs": {
     "url": "https://github.com/kasperpeulen/simply-effect/issues"
