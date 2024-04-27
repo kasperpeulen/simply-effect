@@ -13,7 +13,7 @@ export const getTodoById = (id: string) =>
   Effect.gen(function* () {
     const todo = yield* TodoService.getTodoById("some-id");
     if (todo.description.length < 2) {
-      return yield* Effect.fail(new ValidationError("Too small description"));
+      return yield* new ValidationError("Too small description");
     }
     return todo;
   });
@@ -27,7 +27,7 @@ import { effect } from "simply-effect";
 export const getTodoById = effect(function* (id: string) {
   const todo = yield* TodoService.getTodoById("some-id");
   if (todo.description.length < 2) {
-    return yield* Effect.fail(new ValidationError("Too small description"));
+    return yield* new ValidationError("Too small description");
   }
   return todo;
 });
@@ -36,7 +36,7 @@ export const getTodoById = effect(function* (id: string) {
 If the generator function has no arguments, then `effect` will work exactly the same as `Effect.gen`.
 
 ```tsx
-const value: Effect.Effect<number> = effect(function* () {
+const value: Effect.Effect<void> = effect(function* () {
   yield* Console.log(1);
 });
 ```
