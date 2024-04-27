@@ -38,11 +38,13 @@
     "dist/**/*",
     "README.md"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "auto": {
     "plugins": [
       "npm",
       "released"
-    ],
-    "onlyPublishWithReleaseLabel": true
+    ]
   }
 }

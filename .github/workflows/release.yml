@@ -25,7 +25,7 @@ jobs:
         run: pnpm install
       - name: Test
         run: pnpm vitest run
-      - name: Test
+      - name: Build
         run: pnpm run build
       - name: Create Release
         env:
