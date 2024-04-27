@@ -1,0 +1,29 @@
+{
+  "name": "simply-effect",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "simply-effect: better than all the rest",
+  "author": "Kasper Peulen",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/dts/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "test": "vitest",
+    "tsc": "tsc"
+  },
+  "peerDependencies": {
+    "effect": "^3.0.6"
+  },
+  "devDependencies": {
+    "effect": "^3.0.6",
+    "vitest": "^1.5.2",
+    "prettier": "^3.2.5",
+    "tsx": "^4.7.3",
+    "typescript": "^5.4.5"
+  }
+}
