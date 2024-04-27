@@ -1,10 +1,15 @@
 {
   "name": "simply-effect",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "type": "module",
   "description": "simply-effect: better than all the rest",
   "author": "Kasper Peulen",
   "license": "MIT",
+  "repository": "kasperpeulen/simply-effect",
+  "homepage": "https://github.com/kasperpeulen/simply-effect",
+  "bugs": {
+    "url": "https://github.com/kasperpeulen/simply-effect/issues"
+  },
   "exports": {
     ".": {
       "types": "./dist/dts/index.d.ts",
@@ -14,16 +19,30 @@
   },
   "scripts": {
     "test": "vitest",
-    "tsc": "tsc"
+    "build": "tsc -b tsconfig.json",
+    "auto": "auto",
+    "release": "auto shipit"
   },
-  "peerDependencies": {
+  "peerDepenVdencies": {
     "effect": "^3.0.6"
   },
   "devDependencies": {
+    "auto": "^11.1.6",
     "effect": "^3.0.6",
-    "vitest": "^1.5.2",
     "prettier": "^3.2.5",
     "tsx": "^4.7.3",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.2"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
+  "auto": {
+    "plugins": [
+      "npm",
+      "released"
+    ],
+    "onlyPublishWithReleaseLabel": true
   }
 }
