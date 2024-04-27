@@ -11,10 +11,9 @@ import { Effect } from "effect";
 
 export const getTodoById = (id: string) =>
   Effect.gen(function* () {
-    const todoService = yield* TodoService;
-    const todo = yield* todoService.getTodoById("some-id");
+    const todo = yield* TodoService.getTodoById("some-id");
     if (todo.description.length < 2) {
-      yield* Effect.fail(new ValidationError("Too small description"));
+      return yield* new ValidationError("Too small description");
     }
     return todo;
   });
@@ -26,10 +25,9 @@ Using `simply-effect`:
 import { effect } from "simply-effect";
 
 export const getTodoById = effect(function* (id: string) {
-  const todoService = yield* TodoService;
-  const todo = yield* todoService.getTodoById("some-id");
+  const todo = yield* TodoService.getTodoById("some-id");
   if (todo.description.length < 2) {
-    yield* Effect.fail(new ValidationError("Too small description"));
+    return yield* new ValidationError("Too small description");
   }
   return todo;
 });
@@ -38,8 +36,8 @@ export const getTodoById = effect(function* (id: string) {
 If the generator function has no arguments, then `effect` will work exactly the same as `Effect.gen`.
 
 ```tsx
-const value: Effect.Effect<number> = effect(function* () {
-  return yield* Effect.succeed(1);
+const value: Effect.Effect<void> = effect(function* () {
+  yield* Console.log(1);
 });
 ```
 
@@ -49,7 +47,7 @@ It can work together with classes as well, but an extra type annotations for `th
 class MyService {
   readonly local = 1;
   compute = effect(this, function* (this: MyService, add: number) {
-    return yield* Effect.succeed(this.local + add);
+    yield* Console.log(this.local + add);
   });
 }
 ```
