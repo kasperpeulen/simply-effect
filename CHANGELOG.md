@@ -1,3 +1,15 @@
+# v0.0.3 (Sat Apr 27 2024)
+
+#### 🐛 Bug Fix
+
+- Update description [#3](https://github.com/kasperpeulen/simply-effect/pull/3) ([@kasperpeulen](https://github.com/kasperpeulen))
+
+#### Authors: 1
+
+- Kasper Peulen ([@kasperpeulen](https://github.com/kasperpeulen))
+
+---
+
 # v0.0.2 (Sat Apr 27 2024)
 
 #### 🐛 Bug Fix
